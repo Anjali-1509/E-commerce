@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+ /* //font-family: 'Poppins', sans-serif; */
+
+ /* font-family: 'Poppins', sans-serif; */
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+.navbar a{
+  text-decoration: none;
+  font-size: large;
+  color: grey;
+}
+a:hover{
+  border-bottom: 2px solid black;
+  color:black
+}
+.navbar{
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+li{
+  list-style-type: none;
+}
+#footer a{
+color: white;
+padding:5px;
+text-align: center;
+}
+#footer p{
+  text-align: center;
+}
+#footer a:hover{
+border-bottom: 2px solid white;
+}
+.form{
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -500px;
+}
+#signup{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  height: 550px;
+  width: 500px;
+}
+#signup input{
+  width:400px;
+  margin-top: 30px;
+  border: none;
+  border-bottom: 2px solid #000;
+  border-radius: 0%;
+}
+#signup h2{
+  text-align: center;
+  font-weight: bold;
+}
+#signup button{
+  background-color: black;
+  width: 200px;
+  border-radius: 0%;
+  margin-left: 100px;
+}
+#signup button:hover{
+  background-color: grey;
+  color: white;
+  border: none;
+}
+#login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  height: 400px;
+  width: 500px;
+}
+#login input{
+  width:400px;
+  margin-top: 30px;
+  border: none;
+  border-bottom: 2px solid #000;
+  border-radius: 0%;
+}
+#login h2{
+  text-align: center;
+  font-weight: bold;
+}
+#login button{
+  background-color: black;
+  width: 200px;
+  border-radius: 0%;
+  margin-left: 100px;
+  margin-top: 30px;
+}
+#login button:hover{
+  background-color: grey;
+  color: white;
+  border: none;
+}
+.button{
+  padding: 6px 20px;
+  background-color: black;
+  color:white;
+  border:none;
+  transition: 1.5s ease;
+  font-size: large;
+}
+.button:hover{
+  background-color: grey;
+  color: white;
+}
