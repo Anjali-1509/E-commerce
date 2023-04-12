@@ -12,7 +12,7 @@ const Layout = ({children}) => {
     <div>
       <Navbar />
       <Rout />
-      <main style={{minHeight:"70vh"}}>
+      <main>
       {children}
       <ToastContainer />
       <Toaster />

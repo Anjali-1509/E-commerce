@@ -2,6 +2,7 @@ const mongoose = require("mongoose")
 const fs = require("fs")
 const ProductModel = require("../models/productSchema")
 const slugify = require('slugify')
+const { parseArgs } = require("util")
 
 exports.createProduct=  async(req, res)=>{
 try{
@@ -61,21 +62,88 @@ try{
 const {id}= req.params
 let product= await ProductModel.findById(id).select("photo")
 if(product.photo.data){
-    res.set({"Coontent-type":product.photo.contentType})
+    res.set({"Content-type":product.photo.contentType})
     return res.status(200).send(product.photo.data)
 }
 }
 catch(err){
-  c
+    res.status(500).send({success:false, message:"Something went wrong", error:err.message}) 
 }
 }
 
 exports.deleteProduct=async(req,res)=>{
 try{
-await ProductModel.findByIdAndDeletee(req.params.id).select("-photo")
+await ProductModel.findByIdAndDelete(req.params.id).select("-photo")
 return res.status(200).send({success:true, message:"Product Deleted Successfully"})
 }
 catch(err){
  res.status(500).send({success:false, message:"Something went wrong", error:err.message}) 
+}
+}
+
+exports.getByCategory= async(req, res)=>{
+try{
+const{slug}= req.params
+console.log(slug)
+let arr =[]
+let product = await ProductModel.find().populate({path:"category", match :{slug:slug}}).select("-photo")
+for(let i=0; i<product.length; i++){
+if(product[i].category!==null){
+    arr.push(product[i])
+}
+}
+res.send(arr)
+}
+catch(err){
+    res.status(500).send({success:false, message:"Something went wrong", error:err.message})    
+}
+}
+
+exports.productFilter= async(req, res)=>{
+try{
+const {radio}= req.body
+const {slug} =req.params
+console.log(radio)
+let args={}
+let arr=[]
+if(radio.length) args.price ={$gte : radio[0], $lte :radio[1]}
+const products = await ProductModel.find(args).populate({path:"category", match :{slug:slug}}).select("-photo")
+for(let i=0; i<products.length; i++){
+    if(products[i].category!==null){
+        arr.push(products[i])
+    }
+}
+return res.status(200).send({success:true, products:arr})
+}
+catch(err){
+    res.status(500).send({success:false, message:"Something went wrong", error:err.message}) 
+}
+}
+
+exports.searchProduct = async(req,res)=>{
+try{
+const {keyword}= req.params
+const products = await ProductModel.find({
+    $or :[
+        {name : {$regex: keyword, $options :"i"}},
+        {description : {$regex: keyword, $options :"i"}}
+    ]
+}).select("-photo")
+
+return res.status(200).send(products)
+}
+catch(err){
+    res.status(500).send({success:false, message:"Something went wrong", error:err.message})   
+}
+}
+
+exports.relatedProduct = async(req, res)=>{
+try{
+const {pid, cid} = req.params
+const products = await ProductModel.find({category:cid, _id:{$ne :pid}}).select("-photo").limit(3).populate("category")
+return res.status(200).send({success:true, products:products})
+}
+catch(err){
+    res.status(500).send({success:false, message:"Something went wrong", error:err.message})    
 }
 }

@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import { useAuth } from "../../context/Auth"
+import SearchInput from '../Form/SearchInput';
+import { useCart } from '../../context/Cart';
+import {BsCartFill} from "react-icons/bs"
+import {GiShoppingBag} from "react-icons/gi"
+
 
 
 const Navbar = () => {
   const [auth, setAuth] = useAuth()
+  const [cart]= useCart()
+
+
   const handleLogOut = () => {
     setAuth({ ...auth, user: null, token: "" })
     localStorage.removeItem("auth")
@@ -16,13 +24,14 @@ const Navbar = () => {
       <div>
         <ul>
           <Link to="/">
-            <li style={{ color: "black" }}><ShoppingBagIcon /> ECOMMERCE APP</li>
+            <li style={{ color: "black" }}> <GiShoppingBag size={30} /> ECOMMERCE APP</li>
           </Link>
         </ul>
       </div>
 
-      <div style={{ width: "600px" }}>
+      <div style={{ width: "800px" }}>
         <ul style={{ display: "flex", justifyContent: "space-around" }}>
+          <SearchInput />
           <Link to="/"><li>HOME</li></Link>
           <Link><li>CATEGORY</li></Link>
           {
@@ -44,7 +53,7 @@ const Navbar = () => {
                   </ul>
                 </li>
               </>)}
-          <Link><li>CART</li></Link>
+          <Link to="/cart"><li><BsCartFill /> CART {cart?.length}</li></Link>
         </ul>
       </div>
 

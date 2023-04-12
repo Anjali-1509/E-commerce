@@ -17,12 +17,20 @@ import Users from './admin/Users'
 import Orders from '../user/Orders'
 import Profile from '../user/Profile'
 import Product from './admin/Product'
+import UpdateProduct from './admin/UpdateProduct'
+import Products from './Products'
+import Search from './Search';
+import ProductDetails from './ProductDetails'
+import CartPage from './CartPage'
 
 const Rout = () => {
   return (
     <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/search" element={<Search />} />
         <Route path="/about" element={<About />} />
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="/product/:slug" element={<ProductDetails />} />
 
         <Route path="/dashboard" element={<PrivateRoute />}>
           <Route path="user" element={<Dashboard />} />
@@ -38,7 +46,8 @@ const Rout = () => {
            <Route path="admin/create-product" element={<CreateProduct />} />
            <Route path="admin/users" element={<Users />} />
         </Route>
-
+         
+        <Route path="/products/:slug" element={<Products />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />

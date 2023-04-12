@@ -1,117 +1,341 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
 
+/* //font-family: 'Poppins', sans-serif; */
 
- /* //font-family: 'Poppins', sans-serif; */
-
- /* font-family: 'Poppins', sans-serif; */
-*{
-  margin:0;
-  padding:0;
+/* font-family: 'Poppins', sans-serif; */
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-.navbar a{
+.navbar a {
   text-decoration: none;
   font-size: large;
   color: grey;
 }
-a:hover{
+.navbar a:hover {
   border-bottom: 2px solid black;
-  color:black
+  color: rgb(129, 36, 83);
 }
-.navbar{
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+.navbar {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
-li{
+li {
   list-style-type: none;
 }
-#footer a{
-color: white;
-padding:5px;
-text-align: center;
-}
-#footer p{
+#footer a {
+  color: white;
+  padding: 5px;
   text-align: center;
 }
-#footer a:hover{
-border-bottom: 2px solid white;
+#footer p {
+  text-align: center;
 }
-.form{
+#footer a:hover {
+  border-bottom: 2px solid white;
+}
+.form {
   height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: -500px;
+  margin-bottom: 100px;
 }
-#signup{
+#signup {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
   height: 550px;
   width: 500px;
 }
-#signup input{
-  width:400px;
+#signup input {
+  width: 400px;
   margin-top: 30px;
   border: none;
   border-bottom: 2px solid #000;
   border-radius: 0%;
 }
-#signup h2{
+#signup h2 {
   text-align: center;
   font-weight: bold;
 }
-#signup button{
+#signup button {
   background-color: black;
   width: 200px;
   border-radius: 0%;
   margin-left: 100px;
 }
-#signup button:hover{
+#signup button:hover {
   background-color: grey;
   color: white;
   border: none;
 }
-#login{
+#login {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
   height: 400px;
   width: 500px;
 }
-#login input{
-  width:400px;
+#login input {
+  width: 400px;
   margin-top: 30px;
   border: none;
   border-bottom: 2px solid #000;
   border-radius: 0%;
 }
-#login h2{
+#login h2 {
   text-align: center;
   font-weight: bold;
 }
-#login button{
+#login button {
   background-color: black;
   width: 200px;
   border-radius: 0%;
   margin-left: 100px;
   margin-top: 30px;
 }
-#login button:hover{
+#login button:hover {
   background-color: grey;
   color: white;
   border: none;
 }
-.button{
+.button {
   padding: 6px 20px;
   background-color: black;
-  color:white;
-  border:none;
+  color: white;
+  border: none;
   transition: 1.5s ease;
   font-size: large;
+  margin:"auto"
 }
-.button:hover{
+.button:hover {
   background-color: grey;
   color: white;
+}
+.product-link {
+  text-decoration: none;
+  color: black;
+}
+.product-card-div {
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+  height: 90vh;
+  
+}
+.radio{
+  color: black;
+  font-size: large;
+}
+.sidebar{
+  margin-left: 50px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  height: 95%;
+  width: 350px;
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+ flex-direction: column;
+ padding-top: 10px;
+}
+.card-div {
+  width: 1085px;
+  height: 100%;
+  margin: auto;
+  transition: 1.5s ease-in-out;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  padding-top: 20px;
+
+}
+.product-card-div a {
+  text-decoration: none;
+  color: black;
+}
+
+.main-div {
+  height: 700px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.img-div {
+  height: 100%;
+  background-image: url("https://img.freepik.com/free-photo/shapely-blissful-girl-preparing-date-with-laugh_197531-7152.jpg?w=1060&t=st=1680972646~exp=1680973246~hmac=107052aa54f5d2548d1dd1289278b65f3cceb36a2cc6af28138e9ae3b84eb6d6");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+.inner-div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 3;
+  color: white;
+}
+.inner-div h3 {
+  margin-top: -100px;
+  font-size: 50px;
+  font-family: "Times New Roman", Times, serif;
+}
+.inner-div h1 {
+  font-size: 300px;
+  font-family: "Italiana", serif;
+}
+
+.overlay {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: #1c1b1b8a;
+}
+.heading {
+  text-align: center;
+  font-family: "Italiana", serif;
+  color: rgb(129, 36, 83);
+  font-weight: 600;
+}
+.info {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  height: 500px;
+  margin-top: 20px;
+  display: flex;
+  background-color: rgb(129, 36, 83);
+}
+.info div {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(191, 189, 189);
+}
+.info div img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.info div h1 {
+  width: 500px;
+  font-size: 70px;
+  font-family: "Italiana", serif;
+}
+.info div button {
+  padding: 10px 25px;
+  color: white;
+  font-size: large;
+  background-color: rgb(162, 155, 155);
+  border: none;
+  transition: all 1.2s ease-in-out;
+}
+.info div button:hover {
+  transform: scale(1.1);
+}
+.info2 {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  height: 500px;
+  margin-top: 20px;
+  display: flex;
+  margin-bottom: 10px;
+}
+.info2 > div {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(168, 31, 71);
+}
+.circle {
+  width: 500px;
+  border: 1px solid blue;
+  height: 500px;
+  border-radius: 50%;
+  animation: rotation 10s linear 1s infinite;
+}
+.circle img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+@keyframes rotation {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.info2 h1 {
+  width: 500px;
+  font-size: 70px;
+  font-family: "Italiana", serif;
+  color: rgb(162, 155, 155);
+}
+.circle2 {
+  border: 1px solid black;
+}
+.card img {
+  transition: all 1.2s ease-in;
+}
+.card img:hover {
+  transform: scale(1.1);
+}
+.brands {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  height: 450px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-top: 20px;
+  gap: 0px;
+  background-color: #000;
+}
+.brands div {
+  width: 215px;
+  height: 220px;
+}
+.brands div img {
+  height: 100%;
+  width: 100%;
+}
+
+.card{
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.search-div{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  margin: auto;
+}
+.search-div div{
+  margin: auto;
+}
+.search-div a {
+  text-decoration: none;
+}
+#product-img-div{
+  overflow: hidden;
+}
+#product-img{
+  transition: transform 2s;
+}
+#product-img:hover{
+  transform: scale(1.2);
 }
