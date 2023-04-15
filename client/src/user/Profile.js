@@ -1,40 +1,55 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import UserMenu from '../components/Layout/UserMenu'
 import { useState } from "react"
-import { toast } from 'react-toastify';
+import { toast } from 'react-hot-toast';
 import axios from "axios"
-import { useNavigate } from "react-router-dom"
+import { useAuth } from '../context/Auth';
 
 
 const Profile = () => {
+  const [auth, setAuth] = useAuth()
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [phone, setPhone] = useState("")
   const [address, setAddress] = useState("")
-  const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    const {token} = JSON.parse(localStorage.getItem("auth"))
     try {
-      let res = await axios.post("http://localhost:3000/register", {
-        name, email, password, phone, address
-      })
-      console.log(res)
-      if (res.data.success) {
-        toast.success(res.data.message)
-        navigate("/login")
+      let {data} = await axios.put("http://localhost:3000/update-user", {
+        name, email, password, phone, address}, {
+          headers:{
+            "x-auth-token" :token
+          }
+        })
+      if(data?.error){
+        toast.error("Something Went Wrong")
       }
       else {
-        toast.error(res.data.message)
+        setAuth({...auth, user : data?.updatedUser})
+        let ls = localStorage.getItem("auth")
+        ls = JSON.parse(ls)
+        ls.user = data?.updatedUser
+        localStorage.setItem("auth", JSON.stringify(ls))
+        toast.success("Profile Updated Successfully")
       }
-
     }
     catch (err) {
       console.log(err)
-      toast.error("Something Went Wrong")
     }
   }
+
+  useEffect(()=>{
+     const {email, name,phone, address}= auth?.user
+     setName(name)
+    setEmail(email)
+    setPhone(phone)
+    setAddress(address)
+
+  }, [auth?.user])
+
 
   return (
     <div className='container-fluid m-3 p-3'>
@@ -53,30 +68,26 @@ const Profile = () => {
                 <h2>USER PROFILE</h2>
 
                 <div class="mb-3">
-                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Your Name" aria-describedby="emailHelp" value={name} onChange={(e) => setName(e.target.value)} required />
+                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Your Name" aria-describedby="emailHelp" value={name} onChange={(e) => setName(e.target.value)} />
                 </div>
 
                 <div class="mb-3">
-                  <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Enter your Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+                  <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Enter your Email" value={email} onChange={(e) => setEmail(e.target.value)} disabled />
                 </div>
 
                 <div class="mb-3">
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Your Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Your Password" value={password} onChange={(e) => setPassword(e.target.value)} />
                 </div>
 
                 <div class="mb-3">
-                  <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Enter Your Phone Number" value={phone} onChange={(e) => setPhone(e.target.value)} required />
+                  <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Enter Your Phone Number" value={phone} onChange={(e) => setPhone(e.target.value)} />
                 </div>
 
                 <div class="mb-3">
-                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Your Address" value={address} onChange={(e) => setAddress(e.target.value)} required />
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Your Address" value={address} onChange={(e) => setAddress(e.target.value)}  />
                 </div>
 
-                <div class="mb-3">
-                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Which is your favourite sport" value={answer} onChange={(e) => setAnswer(e.target.value)} required />
-                </div>
-
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">UPDATE</button>
               </form>
             </div>
           </div>

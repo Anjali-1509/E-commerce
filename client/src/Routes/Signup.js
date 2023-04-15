@@ -41,7 +41,7 @@ export default function Signup() {
         <div id="signup">
             <form onSubmit={handleSubmit}>
 
-                <h2>SIGNUP</h2>
+                <h2 className="heading">SIGNUP</h2>
 
                 <div class="mb-3">
                     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Your Name" aria-describedby="emailHelp" value={name} onChange={(e)=>setName(e.target.value)} required />

@@ -100,3 +100,18 @@ exports.getUser=async(req, res)=>{
 exports.test= (req, res)=>{
   res.send("hi i m foine")
 }
+
+exports.updateUser= async(req, res)=>{
+try{
+let {password} = req.body
+let data = req.body
+let id = req.user.id
+if(password && password.length<6) return res.status(400).send("Password should be 6 digits long")
+const hashedPassword= password ? await hashedPassword(password) : undefined
+const updateProfile = await userModel.findOneAndUpdate({_id:id}, data,{new:true})
+ return res.status(200).send({success:true,message : "Profile Updated Successfully", updatedUser : updateProfile})
+}
+catch(err){
+  res.status(500).send({success:false, message:"Something went wrong", error:err.message})    
+}
+}

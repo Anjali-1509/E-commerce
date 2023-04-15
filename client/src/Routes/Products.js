@@ -59,7 +59,7 @@ const Products = () => {
    <div style={{marginBottom:"600px"}}>
     <div className='product-card-div'>
       <div className="sidebar">
-        <h3>FILTER BY PRICE</h3>
+        <h3 className="heading">FILTER BY PRICE</h3>
         <div className="d-flex flex-column">
           <Radio.Group onChange={(e)=>setRadio(e.target.value)}>
              {

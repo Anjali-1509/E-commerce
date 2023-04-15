@@ -36,12 +36,15 @@ li {
   border-bottom: 2px solid white;
 }
 .form {
-  height: 80vh;
+  height: 800px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: -500px;
-  margin-bottom: 100px;
+  margin-bottom: 0px;
+  background-image: url("https://www.creativefabrica.com/wp-content/uploads/2021/11/30/Mandala-illustration-pink-design-color-Graphics-20999118-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 #signup {
   display: flex;
@@ -52,6 +55,7 @@ li {
     rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
   height: 550px;
   width: 500px;
+  background-color: aliceblue;
 }
 #signup input {
   width: 400px;
@@ -84,6 +88,7 @@ li {
     rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
   height: 400px;
   width: 500px;
+  background-color: rgb(250, 246, 246);
 }
 #login input {
   width: 400px;
@@ -115,7 +120,7 @@ li {
   border: none;
   transition: 1.5s ease;
   font-size: large;
-  margin:"auto"
+  margin: "auto";
 }
 .button:hover {
   background-color: grey;
@@ -133,22 +138,23 @@ li {
   gap: 10px;
   margin-top: 20px;
   height: 90vh;
-  
 }
-.radio{
+.radio {
   color: black;
   font-size: large;
 }
-.sidebar{
+.sidebar {
   margin-left: 50px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   height: 95%;
   width: 350px;
   display: flex;
   margin-top: 20px;
   align-items: center;
- flex-direction: column;
- padding-top: 10px;
+  flex-direction: column;
+  padding-top: 10px;
 }
 .card-div {
   width: 1085px;
@@ -156,9 +162,8 @@ li {
   margin: auto;
   transition: 1.5s ease-in-out;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   padding-top: 20px;
-
 }
 .product-card-div a {
   text-decoration: none;
@@ -166,14 +171,14 @@ li {
 }
 
 .main-div {
-  height: 700px;
+  height: 1000px;
   position: relative;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 .img-div {
   height: 100%;
-  background-image: url("https://img.freepik.com/free-photo/shapely-blissful-girl-preparing-date-with-laugh_197531-7152.jpg?w=1060&t=st=1680972646~exp=1680973246~hmac=107052aa54f5d2548d1dd1289278b65f3cceb36a2cc6af28138e9ae3b84eb6d6");
+  background-image: url("https://www.creativefabrica.com/wp-content/uploads/2021/11/30/Mandala-illustration-pink-design-color-Graphics-20999118-1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
@@ -316,26 +321,100 @@ li {
   width: 100%;
 }
 
-.card{
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+.card {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
-.search-div{
+.search-div {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   margin: auto;
 }
-.search-div div{
+.search-div div {
   margin: auto;
 }
 .search-div a {
   text-decoration: none;
 }
-#product-img-div{
+#product-img-div {
   overflow: hidden;
 }
-#product-img{
+#product-img {
   transition: transform 2s;
 }
-#product-img:hover{
+#product-img:hover {
   transform: scale(1.2);
+}
+.order-table-div{
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+.cont {
+  height: 90vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url("https://i.etsystatic.com/35882586/r/il/c686b8/4214156820/il_fullxfull.4214156820_8mhd.jpg");
+  background-size: inherit;
+  background-repeat: no-repeat;
+  display: flex;
+}
+.cont div {
+  height: 90%;
+  width: 600px;
+  margin: auto;
+}
+.col1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.col1 h1{
+  color: #fff;
+  font-size: 100px;
+}
+.col1 p{
+  color: #fff;
+  font-size: 14px;
+}
+.col1 .btn{
+  width: 180px;
+  color: #fff;
+  font-size: 12px;
+  padding: 12px 0;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 20px;
+}
+.col2{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
+}
+.col2 .card {
+  height: 250px;
+  width: 220px;
+  transition: transform 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.col2 .card:hover{
+  transform: translateY(-10px);
+}
+.card1{
+  background-image: url("https://images7.alphacoders.com/105/1053883.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.card2{
+  background-image: url("https://shaadiwish.com/blog/wp-content/uploads/2021/10/pastel-kurta-pajama.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.card3{
+  background-image: url("https://www.thesilhouettestore.com/wp-content/uploads/2022/01/49.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.card4{
+  background-image: url("https://images.samsung.com/is/image/samsung/assets/in/2208/pcd/watches/Galaxy_Watch4Classic_Lifestyle_mo.jpg?$720_850_JPG$");
+  background-position: center;
+  background-size: cover;
 }

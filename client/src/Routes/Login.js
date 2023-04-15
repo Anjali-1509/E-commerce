@@ -44,7 +44,7 @@ const Login = () => {
         <div id="login">
             <form onSubmit={handleSubmit}>
 
-                <h2>LOGIN</h2>
+                <h2 className="heading">LOGIN</h2>
 
                 <div class="mb-3">
                     <input type="email"  class="form-control" id="exampleInputPassword1" placeholder="Enter your Email" value={email} onChange={(e)=>setEmail(e.target.value)} required />

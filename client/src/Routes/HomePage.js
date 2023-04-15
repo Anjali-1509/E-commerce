@@ -11,43 +11,30 @@ function CarouselFadeExample() {
     <Carousel fade>
       <Carousel.Item >
         <img
-          style={{ height: "700px", objectFit: "inherit" }}
+          style={{ height: "800px", objectFit: "inherit" }}
           className="d-block w-100"
-          src="https://img.freepik.com/free-photo/stunning-slim-girl-trendy-shoes-standing-near-clothes-hangers-choosing-attire_197531-7147.jpg?w=1060&t=st=1680975090~exp=1680975690~hmac=c42e72a3ce4d883bc27fa4e47cb45ae3ceaca9173acfada4eac5e33a4147eef8"
+          src="https://i.etsystatic.com/33826835/r/il/578335/4250410306/il_fullxfull.4250410306_79db.jpg"
           alt="First slide"
         />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
-          style={{ height: "700px", objectFit: "cover" }}
+          style={{ height: "800px", objectFit: "cover" }}
           className="d-block w-100"
-          src="https://img.freepik.com/free-photo/shocked-young-woman-looking-price-tag-red-dress_197531-7140.jpg?w=1060&t=st=1680974235~exp=1680974835~hmac=531951cb24e399743dd7e4bc30414edcdfc344babc7d85210b9062e7bc6f187a"
+          src="https://cdn.shopify.com/s/files/1/0414/7209/8467/files/Untitled_design-15_1000x.jpg?v=1659547086"
           alt="Second slide"
         />
 
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
+      
       </Carousel.Item>
       <Carousel.Item>
         <img
-          style={{ height: "700px", objectFit: "inherit" }}
+          style={{ height: "800px", objectFit: "inherit" }}
           className="d-block w-100"
-          src="https://img.freepik.com/free-photo/pale-cute-woman-sending-air-kiss-while-posing-dressing-room_197531-7166.jpg?w=1060&t=st=1680974930~exp=1680975530~hmac=aa10de8abda2f73cb63b5424084135f9b29529e2d17d3e89cae2de17a38a5c8e"
+          src="https://cdn.shopify.com/s/files/1/0596/1505/1965/files/SF22.png"
           alt="Third slide"
         />
 
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
       </Carousel.Item>
 
     </Carousel>
@@ -124,6 +111,38 @@ const HomePage = () => {
 
         <div className="overlay"></div>
       </div>
+
+      <h1 className="heading">TODAY'S FASHION DEALS</h1>
+
+       <div className="cont">
+           <div className='col1'>
+               <h1>shopping</h1>
+               <p>iu bgiu ngiu </p>
+               <button className='btn'>EXPLORE</button>
+           </div>
+
+           <div className='col2'>
+              <div className='card card1'>
+                  <h5>shopping</h5>
+                  <p>anjali singh </p>
+              </div>
+
+              <div className='card card2'>
+                  <h5>shopping</h5>
+                  <p>anjali singh </p>
+              </div>
+
+              <div className='card card3'>
+                  <h5>shopping</h5>
+                  <p>anjali singh </p>
+              </div>
+
+              <div className='card card4'>
+                  <h5>shopping</h5>
+                  <p>anjali singh </p>
+              </div>
+           </div>
+       </div>
 
       <div style={{ marginTop: "20px" }}>
         <h1 className='heading'>SHOP BY CATEGORY</h1>

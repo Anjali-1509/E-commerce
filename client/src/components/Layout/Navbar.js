@@ -20,11 +20,11 @@ const Navbar = () => {
   }
 
   return (
-    <div className='navbar' style={{ display: "flex", justifyContent: "space-between", padding: "10px" }}>
+    <div className='navbar' style={{ display: "flex", justifyContent: "space-between", padding: "10px"}}>
       <div>
         <ul>
           <Link to="/">
-            <li style={{ color: "black" }}> <GiShoppingBag size={30} /> ECOMMERCE APP</li>
+            <li style={{ color: "black" }}> <GiShoppingBag size={30} />SHOPSY</li>
           </Link>
         </ul>
       </div>
