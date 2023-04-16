@@ -20,7 +20,6 @@ const Login = () => {
    let res =await axios.post("http://localhost:3000/login", {
     email, password
    })
-   console.log(res)
    if(res.data.success){
      toast.success("Successfully logged In")
      setAuth({

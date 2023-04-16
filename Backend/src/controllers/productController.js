@@ -5,14 +5,15 @@ const slugify = require('slugify')
 const { parseArgs } = require("util")
 const braintree = require("braintree");
 const OrderModel= require("../models/orderSchema")
+const dotenv = require("dotenv")
 
 //PAYMENT GATEAWAY
-
+dotenv.config()
 const gateway = new braintree.BraintreeGateway({
     environment: braintree.Environment.Sandbox,
-    merchantId: "mtqfrv8yg7sxdg73",
-    publicKey:"m36zpcrndwgs5yjz",
-    privateKey: "57bbcd6ebf98f2ec48dd1340f9bf5ede",
+    merchantId: process.env.BRAINTREE_MERCHANT_ID,
+    publicKey: process.env.BRAINTREE_PUBLIC_KEY,
+    privateKey: process.env. BRAINTREE_PRIVATE_KEY,
   });
 
 exports.createProduct=  async(req, res)=>{

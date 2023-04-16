@@ -25,7 +25,7 @@ function CarouselFadeExample() {
           alt="Second slide"
         />
 
-      
+
       </Carousel.Item>
       <Carousel.Item>
         <img
@@ -44,7 +44,7 @@ function CarouselFadeExample() {
 
 const categoryArr = [
   {
-    img: "https://grazia.wwmindia.com/content/2019/jan/thumbnail-21548769047.jpg",
+    img: "https://img.theloom.in/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/2/6/26-aug01155_2.jpg",
     category: "women-collection"
   },
   {
@@ -52,12 +52,12 @@ const categoryArr = [
     category: "men-collection"
   },
   {
-    img: "https://img.freepik.com/free-photo/portrait-cute-little-boy-girl-stylish-jeans-clothes-looking-camera-studio_155003-21555.jpg?w=360",
-    category: "kids-collection"
+    img: "https://threadcurve.com/wp-content/uploads/2021/03/types-of-perfume-Mar222021-1-min.jpg",
+    category: "perfume"
   },
   {
-    img: "https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/h_373,q_80,w_280/v1/assets/images/15843364/2022/12/3/9a25f6e2-f690-4378-be61-755ab72efb721670061757026LavieYaltaBlackTexturedShoulderBag1.jpg",
-    category: "hand-bags"
+    img: "https://cdn.shopify.com/s/files/1/0555/8658/6685/products/HNFC965019M3_0_1728x.jpg?v=1680341016",
+    category: "handbag"
   },
   {
     img: "https://www.usdermatologypartners.com/wp-content/uploads/2020/04/AdobeStock_288323434-small3x2.jpg",
@@ -68,12 +68,12 @@ const categoryArr = [
     category: "makeup"
   },
   {
-    img: "https://img.freepik.com/free-photo/overhead-view-wristwatch-sunglasses-hat-leaf-starfish-pink-textured-backdrop_23-2148102103.jpg?w=740&t=st=1681014519~exp=1681015119~hmac=5edbc05e265c2f38daa9034be0702d27d6ba66b9c411c8070f8ee3e55c9606a9",
+    img: "https://cdn.shopify.com/s/files/1/0061/8378/0442/products/BR043_222_1024x1024.jpg?v=1675687508",
     category: "accessories"
   },
   {
-    img: "https://images.pexels.com/photos/11042583/pexels-photo-11042583.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    category: "foot-wear"
+    img: "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/9/8/tr:w-480,/980c599MONRO00004353_first.jpg?rnd=20200526195200",
+    category: "footwear"
   }
 ]
 
@@ -114,35 +114,44 @@ const HomePage = () => {
 
       <h1 className="heading">TODAY'S FASHION DEALS</h1>
 
-       <div className="cont">
-           <div className='col1'>
-               <h1>shopping</h1>
-               <p>iu bgiu ngiu </p>
-               <button className='btn'>EXPLORE</button>
-           </div>
+      <div className="cont">
+        <div className='col1'>
+          <h1>shopping</h1>
+          <p>Get crazy deals on your favourite brands  </p>
+           <Link to="/products/women-sarees"><button className='btn'>EXPLORE</button></Link>
+        </div>
 
-           <div className='col2'>
-              <div className='card card1'>
-                  <h5>shopping</h5>
-                  <p>anjali singh </p>
-              </div>
+        <div className='col2'>
 
-              <div className='card card2'>
-                  <h5>shopping</h5>
-                  <p>anjali singh </p>
-              </div>
+          <Link to="/products/women-sarees">
+            <div className='card card1'>
+              <h5>Designer Saress</h5>
+              <p>Saree Divas</p>
+            </div>
+          </Link>
 
-              <div className='card card3'>
-                  <h5>shopping</h5>
-                  <p>anjali singh </p>
-              </div>
+          <Link to="/products/men-ethnic">
+            <div className='card card2'>
+              <h5>Men Kurta</h5>
+              <p>Uniquely You</p>
+            </div>
+          </Link>
 
-              <div className='card card4'>
-                  <h5>shopping</h5>
-                  <p>anjali singh </p>
-              </div>
-           </div>
-       </div>
+          <Link to="/products/women-partywear-dresses">
+            <div className='card card3'>
+              <h5>Western Wear</h5>
+              <p>Be Fabulla</p>
+            </div>
+          </Link>
+
+          <Link to="/products/watch">
+            <div className='card card4'>
+              <h5>Watches</h5>
+              <p>Quality Time</p>
+            </div>
+          </Link>
+        </div>
+      </div>
 
       <div style={{ marginTop: "20px" }}>
         <h1 className='heading'>SHOP BY CATEGORY</h1>
@@ -177,7 +186,7 @@ const HomePage = () => {
               }}
             >
               <Link to={`/products/${item.category}`}>
-                <div className="card" style={{ width: "18rem", width: "350px", margin: 'auto', marginTop: "20px", border: "none", borderRadius: '0px', overflow:'hidden' }}>
+                <div className="card" style={{ width: "18rem", width: "350px", margin: 'auto', marginTop: "20px", border: "none", borderRadius: '0px', overflow: 'hidden' }}>
                   <img src={item.img} className="card-img-top" style={{ height: "350px", margin: "auto", borderRadius: "0px" }} alt="..." />
                   <div className="card-body">
                     <h5 className="card-title text-center">{item.category}</h5>
@@ -249,7 +258,7 @@ const HomePage = () => {
 
         <div className="info2">
           <div>
-            <h1>imstantddelifj cbgf ggnkg  fngiughk</h1>
+            <h1>ADDING SPEED TO YOUR DELIVERIES</h1>
 
           </div>
 

@@ -52,13 +52,13 @@ const Profile = () => {
 
 
   return (
-    <div className='container-fluid m-3 p-3'>
+    <div id="profile-div" className='container-fluid m-3 p-3'>
       <div className='row'>
         <div className='col-md-3'>
           <UserMenu />
         </div>
 
-        <div className='col-md-9 text-center'>
+        <div style={{display:"flex",alignItems:"center", justifyContent:"center",flexDirection:"column"}} className='col-md-9 text-center'>
           <h1>Your Profile</h1>
           <div className='text-center'>
 

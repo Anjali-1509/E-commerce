@@ -14,7 +14,6 @@ const ProductDetails = () => {
   const getProduct = async () => {
     try {
       let { data } = await axios.get(`http://localhost:3000/product/get-product/${params.slug}`)
-      console.log(data)
       setProduct(data?.product)
       getSimilarProduct(data?.product?._id, data?.product.category._id)
     }

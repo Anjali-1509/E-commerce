@@ -70,7 +70,7 @@ const Orders = () => {
                  <div className="container">
                  {
                  item?.products?.map((item) =>
-              <div style={{border:'1px solid red'}} className="row mb-2 card flex-row">
+              <div className="row mb-2 card flex-row">
 
                 <div className='col-md-4'>
                   <img src={`http://localhost:3000/product/product-photo/${item._id}`}

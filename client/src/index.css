@@ -55,7 +55,7 @@ li {
     rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
   height: 550px;
   width: 500px;
-  background-color: aliceblue;
+  background-color: #FFF;
 }
 #signup input {
   width: 400px;
@@ -164,6 +164,8 @@ li {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding-top: 20px;
+
+
 }
 .product-card-div a {
   text-decoration: none;
@@ -271,7 +273,6 @@ li {
 }
 .circle {
   width: 500px;
-  border: 1px solid blue;
   height: 500px;
   border-radius: 50%;
   animation: rotation 10s linear 1s infinite;
@@ -290,7 +291,7 @@ li {
   width: 500px;
   font-size: 70px;
   font-family: "Italiana", serif;
-  color: rgb(162, 155, 155);
+  color: #FFF;
 }
 .circle2 {
   border: 1px solid black;
@@ -370,10 +371,11 @@ li {
 .col1 h1{
   color: #fff;
   font-size: 100px;
+  font-weight: 400;
 }
 .col1 p{
   color: #fff;
-  font-size: 14px;
+  font-size: 25px;
 }
 .col1 .btn{
   width: 180px;
@@ -395,8 +397,20 @@ li {
   transition: transform 0.5s;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
+.category-card-div a{
+  text-decoration: none;
+}
+.col2 p {
+  color: #fff;
+}
+.col2 h5{
+  color: #fff;
+}
 .col2 .card:hover{
   transform: translateY(-10px);
+}
+.col2 a{
+  text-decoration: none;
 }
 .card1{
   background-image: url("https://images7.alphacoders.com/105/1053883.jpg");

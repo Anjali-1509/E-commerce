@@ -28,7 +28,7 @@ const Products = () => {
    try{
   const {data} = await axios.get(`http://localhost:3000/product/get-product-by-category/${param.slug}`)
    setProduct(data)
-   console.log("cp", curretProducts)
+ 
    } 
    catch(err){
     console.log(err)
@@ -38,7 +38,6 @@ const Products = () => {
    const filterProduct = async()=>{
     try{
       let {data}=await axios.post(`http://localhost:3000/product/product-filters/${param.slug}`, {radio})
-      console.log(data)
       setProduct(data?.products)
     }
     catch(err){
@@ -56,7 +55,7 @@ const Products = () => {
 
   return (
    <>
-   <div style={{marginBottom:"600px"}}>
+   <div style={{marginBottom:"730px"}}>
     <div className='product-card-div'>
       <div className="sidebar">
         <h3 className="heading">FILTER BY PRICE</h3>
@@ -107,7 +106,7 @@ const Products = () => {
     </div>
 
  </div>
-    <div style={{width:"85%", marginLeft:"300px", disaply:"flex", alignItems:"center", justifyContent:"center"}}>
+    <div style={{width:"85%", marginLeft:"300px", disaply:"flex", alignItems:"center", justifyContent:"center", marginTop:"200px"}}>
         <Pagination productPerPage={productPerPage} totalProduct={product.length} paginate={paginate}/>
       </div>
     </>

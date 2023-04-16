@@ -24,7 +24,7 @@ const Navbar = () => {
       <div>
         <ul>
           <Link to="/">
-            <li style={{ color: "black" }}> <GiShoppingBag size={30} />SHOPSY</li>
+            <li style={{ color: "black" }}> <GiShoppingBag size={30} />SHOPIFY</li>
           </Link>
         </ul>
       </div>
