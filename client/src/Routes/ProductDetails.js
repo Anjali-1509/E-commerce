@@ -13,7 +13,7 @@ const ProductDetails = () => {
 
   const getProduct = async () => {
     try {
-      let { data } = await axios.get(`http://localhost:3000/product/get-product/${params.slug}`)
+      let { data } = await axios.get(`https://e-commerce-9xkj.onrender.com/product/get-product/${params.slug}`)
       setProduct(data?.product)
       getSimilarProduct(data?.product?._id, data?.product.category._id)
     }
@@ -24,7 +24,7 @@ const ProductDetails = () => {
 
   const getSimilarProduct = async (pid, cid) => {
     try {
-      const { data } = await axios.get(`http://localhost:3000/product/related-product/${pid}/${cid}`)
+      const { data } = await axios.get(`https://e-commerce-9xkj.onrender.com/product/related-product/${pid}/${cid}`)
       setRelatedProduct(data?.products)
     }
     catch (err) {
@@ -41,7 +41,7 @@ const ProductDetails = () => {
       <div className='row container mt-3'>
         <div className='col-md-6' id='product-img-div'>
           <img
-            src={`http://localhost:3000/product/product-photo/${product._id}`}
+            src={`https://e-commerce-9xkj.onrender.com/product/product-photo/${product._id}`}
             className="card-img-top"
             height="600"
             width="550px"
@@ -78,7 +78,7 @@ const ProductDetails = () => {
 
               <div class="card mb-4" style={{ width: "20rem", display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column" }}>
                 <img
-                  src={`http://localhost:3000/product/product-photo/${item._id}`}
+                  src={`https://e-commerce-9xkj.onrender.com/product/product-photo/${item._id}`}
                   style={{ height: "370px" }}
                   class="card-img-top"
                   id='product-img'

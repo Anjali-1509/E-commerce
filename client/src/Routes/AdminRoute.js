@@ -11,7 +11,7 @@ const AdminRoute = () => {
 
     useEffect(()=>{
      const authCheck=async()=>{
-        let res = await axios.get("http://localhost:3000/admin-auth",{
+        let res = await axios.get("https://e-commerce-9xkj.onrender.com/admin-auth",{
             headers:{
                 "x-auth-token": auth?.token
             }

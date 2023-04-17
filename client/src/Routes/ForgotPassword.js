@@ -2,7 +2,7 @@ import React from 'react'
 import axios from "axios"
 import { useState } from 'react';
 import {useNavigate, useLocation} from "react-router-dom"
-import { toast } from 'react-toastify';
+import { toast } from 'react-hot-toast';
 import {useAuth} from "../context/Auth"
 
 
@@ -18,12 +18,12 @@ const ForgotPassword = () => {
   const handleSubmit=async(e)=>{
    e.preventDefault()
    try{
-   let res =await axios.post("http://localhost:3000/forgot-password", {
+   let res =await axios.post("https://e-commerce-9xkj.onrender.com/forgot-password", {
     email,answer, newPassword
    })
    console.log(res)
    if(res.data.success){
-     toast.success("Successfully logged In")
+     toast.success("Password Changed Successfully")
      navigate("/login")
    }else {
     toast.error(res.message)

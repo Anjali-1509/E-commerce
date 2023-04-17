@@ -11,7 +11,7 @@ const Product = () => {
 
   const getAllProducts = async () => {
     try {
-      const { data } = await axios.get("http://localhost:3000/product/get-product")
+      const { data } = await axios.get("https://e-commerce-9xkj.onrender.com/product/get-product")
       setProduct(data?.products)
     }
     catch (err) {
@@ -23,7 +23,7 @@ const Product = () => {
   try{
     const answer = window.prompt("Are you sure, You want to delete this product")
     if(!answer) return
-   const {data}= axios.delete(`http://localhost:3000/product/delete-product/${id}`)
+   const {data}= axios.delete(`https://e-commerce-9xkj.onrender.com/product/delete-product/${id}`)
    console.log(data)
    toast.success("Product Deleted Successfully")
    getAllProducts()
@@ -55,7 +55,7 @@ const Product = () => {
           products.map((item) =>
   
            <div class="card mb-4" style={{width :"20rem"}}>
-              <img src={`http://localhost:3000/product/product-photo/${item._id}`} 
+              <img src={`https://e-commerce-9xkj.onrender.com/product/product-photo/${item._id}`} 
               style={{height:"370px"}}
               class="card-img-top" alt="..." />
               <div class="card-body">

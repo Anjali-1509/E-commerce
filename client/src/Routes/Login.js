@@ -17,7 +17,7 @@ const Login = () => {
   const handleSubmit=async(e)=>{
    e.preventDefault()
    try{
-   let res =await axios.post("http://localhost:3000/login", {
+   let res =await axios.post("https://e-commerce-9xkj.onrender.com/login", {
     email, password
    })
    if(res.data.success){

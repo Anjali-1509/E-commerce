@@ -14,7 +14,7 @@ const Orders = () => {
    const getOrders = async()=>{
   const {token}= JSON.parse(localStorage.getItem("auth"))
    try{
-       const {data} = await axios.get("http://localhost:3000/orders", {
+       const {data} = await axios.get("https://e-commerce-9xkj.onrender.com/orders", {
         headers : {
           "x-auth-token" : token
         }
@@ -73,7 +73,7 @@ const Orders = () => {
               <div className="row mb-2 card flex-row">
 
                 <div className='col-md-4'>
-                  <img src={`http://localhost:3000/product/product-photo/${item._id}`}
+                  <img src={`https://e-commerce-9xkj.onrender.com/product/product-photo/${item._id}`}
                     classname="card-img-top"
                     height="240"
                     width="280px"

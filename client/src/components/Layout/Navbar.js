@@ -33,7 +33,7 @@ const Navbar = () => {
         <ul style={{ display: "flex", justifyContent: "space-around" }}>
           <SearchInput />
           <Link to="/"><li>HOME</li></Link>
-          <Link><li>CATEGORY</li></Link>
+          
           {
             !auth.user ?
               (<>

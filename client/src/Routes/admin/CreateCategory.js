@@ -20,7 +20,7 @@ const CreateCategory = () => {
     e.preventDefault()
     const {token} = JSON.parse(localStorage.getItem("auth"))
     console.log(token)
-    const {data} = await axios.post("http://localhost:3000/category/create-category", {name},{
+    const {data} = await axios.post("https://e-commerce-9xkj.onrender.com/category/create-category", {name},{
       headers:{
         "x-auth-token" :token
       }
@@ -37,7 +37,7 @@ const CreateCategory = () => {
 
   const getCategory= async()=>{
     try{
-     let {data} =await axios.get("http://localhost:3000/category/get-category")
+     let {data} =await axios.get("https://e-commerce-9xkj.onrender.com/category/get-category")
      if(data.success){
       setCategory(data.category)
      }
@@ -55,7 +55,7 @@ const CreateCategory = () => {
    e.preventDefault()
    const {token} = JSON.parse(localStorage.getItem("auth"))
    try{
-    const {data}= await axios.put(`http://localhost:3000/category/update-category/${selected._id}`, {
+    const {data}= await axios.put(`https://e-commerce-9xkj.onrender.com/category/update-category/${selected._id}`, {
     name:updatedName
   },{
     headers:{
@@ -79,7 +79,7 @@ const CreateCategory = () => {
   const handleDelete=async(id)=>{
     const {token} = JSON.parse(localStorage.getItem("auth"))
     try{
-     const {data}= await axios.delete(`http://localhost:3000/category/delete-category/${id}`,{
+     const {data}= await axios.delete(`https://e-commerce-9xkj.onrender.com/category/delete-category/${id}`,{
      headers:{
        "x-auth-token":token
      }

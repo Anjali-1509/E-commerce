@@ -6,7 +6,7 @@ const route = require("./routes/routes")
 const categoryRoute = require("./routes/categoryRoute")
 const productRoutes= require("./routes/productRoutes")
 const cors = require("cors")
-const path = require("path")
+
 
 
 const app = express()
@@ -15,7 +15,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 app.use(morgan("dev"))
-app.use(express.static(path.join(__dirname, "../client/build")))
+
 
 dotenv.config()
 
@@ -28,9 +28,7 @@ app.use("/", route)
 app.use("/category", categoryRoute)
 app.use("/product", productRoutes)
 
-app.use("*",function(req,res){
-  res.sendFile(path.join(__dirname, "../client/build/index.html"))  
-})
+
 
 
 const PORT = process.env.PORT

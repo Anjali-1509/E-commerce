@@ -18,7 +18,7 @@ const Profile = () => {
     e.preventDefault()
     const {token} = JSON.parse(localStorage.getItem("auth"))
     try {
-      let {data} = await axios.put("http://localhost:3000/update-user", {
+      let {data} = await axios.put("https://e-commerce-9xkj.onrender.com/update-user", {
         name, email, password, phone, address}, {
           headers:{
             "x-auth-token" :token

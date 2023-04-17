@@ -20,7 +20,7 @@ const CreateProduct = () => {
    //GET CATEGORY
    const getCategory= async()=>{
     try{
-     let {data} =await axios.get("http://localhost:3000/category/get-category")
+     let {data} =await axios.get("https://e-commerce-9xkj.onrender.com/category/get-category")
      if(data.success){
       setCategories(data.category)
      }
@@ -46,7 +46,7 @@ const CreateProduct = () => {
       productData.append("photo", photo);
       productData.append("category", category);
       const { data } = axios.post(
-        "http://localhost:3000/product/create-product",
+        "https://e-commerce-9xkj.onrender.com/product/create-product",
         productData,{
           headers:{
             "x-auth-token" : token

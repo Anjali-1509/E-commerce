@@ -16,7 +16,7 @@ export default function Signup() {
     const handleSubmit=async(e)=>{
      e.preventDefault()
      try{
-     let res =await axios.post("http://localhost:3000/register",{
+     let res =await axios.post("https://e-commerce-9xkj.onrender.com/register",{
         name,email, password, phone, address,answer
      })
      console.log(res)

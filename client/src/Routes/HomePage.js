@@ -48,7 +48,7 @@ const categoryArr = [
     category: "women-collection"
   },
   {
-    img: "https://media.istockphoto.com/id/1425659954/photo/lifestyle-and-luxury-businessman-fashion-model-in-studio-photoshoot-for-wealthy-and-rich.jpg?b=1&s=170667a&w=0&k=20&c=279yVUji5fkmxDm6pACStKqDk0DEn7FZB_iJQqumeIw=",
+    img: "https://assets0.mirraw.com/images/11381653/SHIPAA13_1_zoom.jpg?1680603787",
     category: "men-collection"
   },
   {
@@ -239,7 +239,7 @@ const HomePage = () => {
 
           <div>
             <h1>Incredible Prices On All Your Favourite Items</h1>
-            <button>SHOP NOW</button>
+            <Link to="/products/makeup"><button>SHOP NOW</button></Link>
           </div>
         </div>
       </Animate>

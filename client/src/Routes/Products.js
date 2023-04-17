@@ -26,7 +26,7 @@ const Products = () => {
 
   const getProduct=async()=>{
    try{
-  const {data} = await axios.get(`http://localhost:3000/product/get-product-by-category/${param.slug}`)
+  const {data} = await axios.get(`https://e-commerce-9xkj.onrender.com/product/get-product-by-category/${param.slug}`)
    setProduct(data)
  
    } 
@@ -37,7 +37,7 @@ const Products = () => {
 
    const filterProduct = async()=>{
     try{
-      let {data}=await axios.post(`http://localhost:3000/product/product-filters/${param.slug}`, {radio})
+      let {data}=await axios.post(`https://e-commerce-9xkj.onrender.com/product/product-filters/${param.slug}`, {radio})
       setProduct(data?.products)
     }
     catch(err){
@@ -86,7 +86,7 @@ const Products = () => {
                     
          
          <div class="card mb-4" style={{width :"20rem", display:"flex",alignItems:"center", justifyContent:"center", flexDirection:"column"}}>
-              <img src={`http://localhost:3000/product/product-photo/${item._id}`}
+              <img src={`https://e-commerce-9xkj.onrender.com/product/product-photo/${item._id}`}
               style={{height:"370px"}}
               class="card-img-top" alt="..." />
               <div style={{display:"flex",alignItems:"center", justifyContent:"center", flexDirection:"column"}} class="card-body">
